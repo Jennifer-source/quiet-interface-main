@@ -11,7 +11,8 @@ export function StartExperiment() {
       </h2>
       <p className="mt-6 max-w-xl text-[16px] leading-[1.7] text-paper/70">
         Complete the same focus task in both interface conditions — the same
-        document, the same three marks, the same note.
+        document, the same three marks, the same note. The session is anonymous
+        from start to finish.
       </p>
 
       <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">

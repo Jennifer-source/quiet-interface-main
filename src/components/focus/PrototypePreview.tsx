@@ -7,8 +7,8 @@ const figures: {
   variant: Condition;
   action: string;
 }[] = [
-  { variant: "conventional", action: "Start with Conventional" },
-  { variant: "quiet", action: "Start with Quiet" },
+  { variant: "conventional", action: "Preview Conventional" },
+  { variant: "quiet", action: "Preview Quiet" },
 ];
 
 /** Static previews of the two conditions, each linked into the live task. */
@@ -21,7 +21,8 @@ export function PrototypePreview() {
       <p className="mt-6 max-w-2xl text-[15px] leading-[1.75] text-ash">
         Static previews of the two conditions. The document, the steps and the
         required responses stay identical — only the interface around them
-        changes.
+        changes. In the full task, the order of the two conditions is set in
+        advance rather than chosen.
       </p>
 
       <div className="mt-10 grid gap-8 lg:grid-cols-2 lg:gap-10">
@@ -36,7 +37,7 @@ export function PrototypePreview() {
                 {conditionSummaries[figure.variant]}
               </p>
               <Link
-                to={`/experiment?condition=${figure.variant}`}
+                to="/experiment"
                 className="mt-4 inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.16em] text-ink underline-offset-4 transition-colors hover:underline hover:decoration-line"
               >
                 {figure.action}
@@ -48,7 +49,7 @@ export function PrototypePreview() {
       </div>
 
       <p className="mt-10 border-t border-line pt-5 font-mono text-[11px] uppercase tracking-[0.16em] text-ash">
-        The full task runs in either condition from the experiment brief
+        The full task runs both conditions from the experiment brief
       </p>
     </Section>
   );

@@ -14,9 +14,11 @@ export const documentTitle = "Daylight and Alertness at Work";
 export const documentSubtitle = "A short review, prepared for this study";
 
 /**
- * The reading document. Every sentence is a candidate: participants mark the
- * three they consider most important. The text is identical in both interface
- * conditions and deliberately sits outside the study's own research question.
+ * The reading document: seven statements — three predetermined targets and
+ * four plausible distractors (see `src/lib/research/targetStatements.ts` for
+ * the key, which never reaches the task UI). Participants mark the three they
+ * consider most important. The text is identical in both interface conditions
+ * and deliberately sits outside the study's own research question.
  */
 export const paragraphs: Paragraph[] = [
   {
@@ -31,14 +33,6 @@ export const paragraphs: Paragraph[] = [
         id: "s2",
         text: "Much of the earlier literature relied on self-reported sleepiness, which correlates only loosely with behavioral measures of attention.",
       },
-      {
-        id: "s3",
-        text: "More recent designs administer a short attention task at the desk, so alertness can be sampled during a normal working day without removing people from their environment.",
-      },
-      {
-        id: "s4",
-        text: "This shift makes the measurements more representative, and considerably harder to compare across sites.",
-      },
     ],
   },
   {
@@ -46,20 +40,16 @@ export const paragraphs: Paragraph[] = [
     label: "Evidence",
     sentences: [
       {
+        id: "s3",
+        text: "More recent designs administer a short attention task at the desk, so alertness can be sampled during a normal working day without removing people from their environment.",
+      },
+      {
+        id: "s4",
+        text: "Sample sizes in this literature are frequently fewer than twenty participants.",
+      },
+      {
         id: "s5",
         text: "Reported improvements are generally small, and most of them disappear once time of day and prior sleep are entered into the model.",
-      },
-      {
-        id: "s6",
-        text: "Season, latitude and window treatment all change the light that actually reaches the eye, so floor-area glazing remains a poor proxy for exposure.",
-      },
-      {
-        id: "s7",
-        text: "Several registered replications have failed to recover the original association.",
-      },
-      {
-        id: "s8",
-        text: "Sample sizes in this literature are frequently fewer than twenty participants.",
       },
     ],
   },
@@ -68,15 +58,11 @@ export const paragraphs: Paragraph[] = [
     label: "Conclusion",
     sentences: [
       {
-        id: "s9",
+        id: "s6",
         text: "Where an effect is found, it is usually described as short-lived, decaying within about an hour of the change in light.",
       },
       {
-        id: "s10",
-        text: "Almost no study has followed a cohort beyond a single working week, so seasonal claims rest on cross-sectional comparisons.",
-      },
-      {
-        id: "s11",
+        id: "s7",
         text: "The pragmatic reading is that daylight is a plausible but weak lever, and that variation within a day should be modeled rather than assumed constant.",
       },
     ],

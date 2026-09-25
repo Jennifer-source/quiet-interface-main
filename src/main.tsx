@@ -14,6 +14,8 @@ const Landing = lazy(() => import("./pages/Landing.tsx"));
 const AuthPage = lazy(() => import("./pages/Auth.tsx"));
 const Dashboard = lazy(() => import("./pages/Dashboard.tsx"));
 const Experiment = lazy(() => import("./pages/Experiment.tsx"));
+// Researcher development view — not part of the participant-facing study.
+const Research = lazy(() => import("./pages/Research.tsx"));
 const NotFound = lazy(() => import("./pages/NotFound.tsx"));
 
 // Simple loading fallback for route transitions
@@ -134,6 +136,8 @@ createRoot(document.getElementById("root")!).render(
                 }
               />
               <Route path="/experiment" element={<Experiment />} />
+              {/* Researcher development view — not in study navigation. */}
+              <Route path="/research" element={<Research />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>

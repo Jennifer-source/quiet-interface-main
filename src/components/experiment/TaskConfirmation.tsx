@@ -8,7 +8,6 @@ import {
   MAX_MARKS,
   conditionLetters,
   conditionNames,
-  otherCondition,
   sentencesByIds,
 } from "@/lib/study";
 
@@ -20,16 +19,18 @@ export function TaskConfirmation({
   condition,
   marks,
   note,
-  onRunOther,
+  continueLabel,
+  onContinue,
 }: {
   condition: "conventional" | "quiet";
   marks: string[];
   note: string;
-  onRunOther: () => void;
+  /** Primary action label, set by the session flow (next condition or done). */
+  continueLabel: string;
+  onContinue: () => void;
 }) {
   const headingRef = useRef<HTMLHeadingElement>(null);
   const marked = sentencesByIds(marks);
-  const other = otherCondition(condition);
 
   useEffect(() => {
     headingRef.current?.focus();
@@ -106,10 +107,10 @@ export function TaskConfirmation({
 
                 <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
                   <Button
-                    onClick={onRunOther}
+                    onClick={onContinue}
                     className="h-12 rounded-none px-7 font-mono text-[11px] uppercase tracking-[0.2em]"
                   >
-                    Run the {conditionNames[other]} condition
+                    {continueLabel}
                   </Button>
                   <Button
                     asChild

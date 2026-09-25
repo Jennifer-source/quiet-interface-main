@@ -33,8 +33,8 @@ export function Conditions() {
         Same task, two interface conditions.
       </h2>
       <p className="mt-6 max-w-2xl text-[15px] leading-[1.75] text-ash">
-        Both conditions will be compared on the same task. Neither is assumed
-        to be better — the purpose of the study is comparison.
+        Both conditions are presented on the same task. Neither is assumed to
+        be better — the purpose of the study is comparison.
       </p>
 
       <div className="mt-10 grid divide-y divide-line border-t border-line lg:grid-cols-2 lg:divide-x lg:divide-y-0">

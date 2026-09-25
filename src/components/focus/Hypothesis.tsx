@@ -16,8 +16,10 @@ export function Hypothesis() {
       </h2>
 
       <p className="mt-8 max-w-2xl border-t border-line pt-6 text-[15px] leading-[1.75] text-ash">
-        Stated as a hypothesis, not as a finding. Participant data has not been
-        collected, and no effect is claimed.
+        Stated as a hypothesis, not as a finding. The prototype is designed to
+        explore whether differences in interface complexity are associated with
+        differences in task performance and perceived experience — no effect is
+        claimed.
       </p>
     </Section>
   );

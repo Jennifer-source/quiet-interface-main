@@ -3,9 +3,9 @@ import { Container } from "./Container";
 import { SectionLink } from "./SectionLink";
 
 const studyMeta = [
-  { term: "Purpose", detail: "Compare two interface conditions on one standardized task" },
+  { term: "Purpose", detail: "Explore two interface conditions on one standardized task" },
   { term: "Task", detail: "Read a short document, mark three statements, write one note" },
-  { term: "Status", detail: "Pre-data — no results have been collected" },
+  { term: "Status", detail: "Anonymous sessions · no identifying data collected" },
 ];
 
 /** Opening masthead of the study overview. */
@@ -40,7 +40,8 @@ export function Hero() {
             <p className="text-[15px] leading-[1.75] text-ash md:col-span-5 md:col-start-8">
               An experimental interaction-design study exploring whether
               reducing visual competition, simultaneous choices and unnecessary
-              interaction can change the experience of focused work.
+              interaction can change the experience of focused work. The
+              prototype records observations only — it does not claim results.
             </p>
           </div>
 

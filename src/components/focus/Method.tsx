@@ -33,7 +33,7 @@ const steps: Step[] = [
   {
     index: "04",
     title: "Analysis",
-    body: "Compare quantitative observations and qualitative feedback.",
+    body: "Compare quantitative observations and qualitative feedback. Observations are recorded per condition; no condition is designated in advance as the better one.",
   },
 ];
 
