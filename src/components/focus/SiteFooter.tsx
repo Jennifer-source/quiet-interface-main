@@ -10,9 +10,9 @@ const studyLinks = [
 ];
 
 const statusLines = [
-  "Stage 1 — Foundation",
-  "Intro / study overview",
-  "No participant data",
+  "Personal research prototype",
+  "Two interface conditions",
+  "No participant data recorded",
 ];
 
 /** About block + study index. Doubles as the `About` anchor of the page. */
@@ -22,16 +22,16 @@ export function SiteFooter() {
       <Container>
         <div className="grid gap-10 py-14 md:grid-cols-12 md:gap-x-12 md:py-20">
           <div className="md:col-span-4">
-            <p className="font-mono text-[13px] font-medium uppercase leading-none tracking-[0.34em] text-ink">
-              Focus
-            </p>
-            <p className="mt-3 font-serif text-xl leading-tight text-ink">
+            <p className="font-mono text-[13px] font-medium uppercase leading-none tracking-[0.24em] text-ink">
               Quiet Interface
             </p>
+            <p className="mt-3 font-serif text-xl leading-tight text-ink">
+              An interaction-design research prototype.
+            </p>
             <p className="mt-5 max-w-sm text-[14px] leading-[1.75] text-ash">
-              An HCI / interaction-design research prototype examining how
-              interface complexity shapes focused digital work. This first
-              version establishes the study foundation only.
+              A small study of attention and cognition: one standardized focus
+              task, run inside two interface conditions so they can be compared
+              directly. There are no accounts and no analytics.
             </p>
           </div>
 
@@ -77,7 +77,7 @@ export function SiteFooter() {
         </div>
 
         <div className="flex flex-col gap-2 border-t border-line py-6 font-mono text-[10px] uppercase tracking-[0.18em] text-ash sm:flex-row sm:items-center sm:justify-between">
-          <span>FOCUS — Quiet Interface</span>
+          <span>Quiet Interface — HCI study</span>
           <span>Interaction design study · {new Date().getFullYear()}</span>
         </div>
       </Container>

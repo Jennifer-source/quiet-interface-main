@@ -2,15 +2,16 @@ import { Button } from "@/components/ui/button";
 import { Section } from "./Section";
 import { SectionLink } from "./SectionLink";
 
-/** Closing call to the placeholder experiment route. */
+/** Closing call into the experiment brief and task. */
 export function StartExperiment() {
   return (
     <Section id="experiment" label="Start experiment" tone="ink">
       <h2 className="font-serif text-[clamp(2rem,5vw,4rem)] font-normal uppercase leading-[1] tracking-[-0.02em] text-paper">
-        Ready to explore?
+        Ready to begin?
       </h2>
       <p className="mt-6 max-w-xl text-[16px] leading-[1.7] text-paper/70">
-        Experience both interface conditions using the same task.
+        Complete the same focus task in both interface conditions — the same
+        document, the same three marks, the same note.
       </p>
 
       <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
@@ -19,10 +20,10 @@ export function StartExperiment() {
           size="lg"
           className="h-12 rounded-none bg-paper px-7 font-mono text-[11px] uppercase tracking-[0.2em] text-ink hover:bg-paper/90 hover:text-ink"
         >
-          <SectionLink to="/experiment">Start experiment</SectionLink>
+          <SectionLink to="/experiment">Start the task</SectionLink>
         </Button>
         <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-paper/60">
-          Stage 1 · placeholder route
+          Opens the experiment brief
         </p>
       </div>
     </Section>

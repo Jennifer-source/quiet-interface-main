@@ -3,9 +3,9 @@ import { Container } from "./Container";
 import { SectionLink } from "./SectionLink";
 
 const studyMeta = [
-  { term: "Stage", detail: "01 — Foundation" },
-  { term: "Task", detail: "Read the document, mark three statements, write one note" },
-  { term: "Status", detail: "Pre-data — no results yet" },
+  { term: "Purpose", detail: "Compare two interface conditions on one standardized task" },
+  { term: "Task", detail: "Read a short document, mark three statements, write one note" },
+  { term: "Status", detail: "Pre-data — no results have been collected" },
 ];
 
 /** Opening masthead of the study overview. */
@@ -19,7 +19,7 @@ export function Hero() {
               HCI / Interaction Design Study
             </p>
             <p className="font-mono text-[11px] uppercase leading-[1.6] tracking-[0.18em] text-ash">
-              Stage 01 — Foundation
+              Standardized focus task
             </p>
           </div>
 
@@ -58,7 +58,7 @@ export function Hero() {
               size="lg"
               className="h-12 rounded-none px-7 font-mono text-[11px] uppercase tracking-[0.2em] shadow-none"
             >
-              <SectionLink to="/experiment">Start prototype</SectionLink>
+              <SectionLink to="/experiment">Start the task</SectionLink>
             </Button>
           </div>
 

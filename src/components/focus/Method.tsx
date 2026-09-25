@@ -16,7 +16,7 @@ const steps: Step[] = [
   {
     index: "02",
     title: "Task",
-    body: "Participants review a short research document, identify three important statements, mark those three statements, and add one short research note. The same task is performed in both interface conditions.",
+    body: "Participants read a short research document, mark the three statements they consider most important, add one short note and submit. The same task is performed in both interface conditions.",
   },
   {
     index: "03",

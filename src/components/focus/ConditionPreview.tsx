@@ -151,10 +151,9 @@ function ConventionalMock() {
 function QuietMock() {
   return (
     <div className="flex h-full flex-col text-[8px] leading-[1.4] text-ash sm:text-[9px]">
-      <div className="flex items-center justify-between border-b border-line px-4 py-2.5">
-        <span className="font-medium uppercase tracking-[0.24em] text-ink">
-          Focus
-        </span>
+      <div className="flex items-center justify-between border-b border-line px-4 py-2.5">          <span className="font-medium uppercase tracking-[0.24em] text-ink">
+            Quiet Interface
+          </span>
         <span className="size-1.5 bg-sage" />
       </div>
 

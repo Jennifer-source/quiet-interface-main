@@ -1,22 +1,17 @@
+import { Link } from "react-router";
 import { ConditionPreview } from "./ConditionPreview";
 import { Section } from "./Section";
+import { conditionSummaries, type Condition } from "@/lib/study";
 
-const figures = [
-  {
-    variant: "conventional" as const,
-    name: "Conventional",
-    description:
-      "Persistent navigation, several toolbars and side panels — many controls visible at once.",
-  },
-  {
-    variant: "quiet" as const,
-    name: "Quiet",
-    description:
-      "A single column, one primary control and progressive disclosure — fewer competing elements.",
-  },
+const figures: {
+  variant: Condition;
+  action: string;
+}[] = [
+  { variant: "conventional", action: "Start with Conventional" },
+  { variant: "quiet", action: "Start with Quiet" },
 ];
 
-/** Static previews of the two future interface conditions. */
+/** Static previews of the two conditions, each linked into the live task. */
 export function PrototypePreview() {
   return (
     <Section id="preview" label="Prototype preview" tone="surface">
@@ -24,28 +19,36 @@ export function PrototypePreview() {
         Two interfaces, one task.
       </h2>
       <p className="mt-6 max-w-2xl text-[15px] leading-[1.75] text-ash">
-        Static previews of the two conditions, shown to communicate the
-        difference in information density. Neither interface is functional yet.
+        Static previews of the two conditions. The document, the steps and the
+        required responses stay identical — only the interface around them
+        changes.
       </p>
 
       <div className="mt-10 grid gap-8 lg:grid-cols-2 lg:gap-10">
         {figures.map((figure) => (
-          <figure key={figure.name} className="flex flex-col">
+          <figure key={figure.variant} className="flex flex-col">
             <ConditionPreview variant={figure.variant} />
             <figcaption className="mt-5 border-t border-line pt-4">
               <p className="font-mono text-[11px] font-medium uppercase leading-none tracking-[0.24em] text-ink">
-                {figure.name}
+                {figure.variant === "conventional" ? "Conventional" : "Quiet"}
               </p>
               <p className="mt-3 max-w-sm text-[14px] leading-[1.7] text-ash">
-                {figure.description}
+                {conditionSummaries[figure.variant]}
               </p>
+              <Link
+                to={`/experiment?condition=${figure.variant}`}
+                className="mt-4 inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.16em] text-ink underline-offset-4 transition-colors hover:underline hover:decoration-line"
+              >
+                {figure.action}
+                <span aria-hidden="true">→</span>
+              </Link>
             </figcaption>
           </figure>
         ))}
       </div>
 
       <p className="mt-10 border-t border-line pt-5 font-mono text-[11px] uppercase tracking-[0.16em] text-ash">
-        Stage 1 — previews only, no task interface yet
+        The full task runs in either condition from the experiment brief
       </p>
     </Section>
   );

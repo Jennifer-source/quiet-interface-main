@@ -11,9 +11,10 @@ import { SiteNav } from "@/components/focus/SiteNav";
 import { StartExperiment } from "@/components/focus/StartExperiment";
 
 /**
- * Stage-one study overview: the research introduction. Arriving from another
- * route with a `#hash` scrolls to that section (CSS smooth scrolling respects
- * `prefers-reduced-motion`); otherwise the page starts at the top.
+ * Study overview: the research introduction, ending in the call to start the
+ * task. Arriving from another route with a `#hash` scrolls to that section
+ * (CSS smooth scrolling respects `prefers-reduced-motion`); otherwise the
+ * page starts at the top.
  */
 export default function Landing() {
   const { hash } = useLocation();
